@@ -1,0 +1,41 @@
+<html>
+  <head>
+   <title>Ali Baker Project</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='nicepage.css')}}" media="screen">
+    <link rel="stylesheet" href="{{url_for('static', filename='Home.css')}}" media="screen">
+    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp"  type="text/javascript" ></script>
+    <script language="JavaScript" src="https://unpkg.com/bowser@2.4.0/es5.js"></script>
+    <script language="JavaScript" src="https://cdnjs.cloudflare.com/ajax/libs/ClientJS/0.2.1/client.min.js"></script>
+	  <script type="text/javascript">
+        if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+            document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.5.3/bluebird.min.js"><\/script><script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/7.2.5/polyfill.min.js"><\/script>');
+    </script>
+    <script language="JavaScript" src="../static/PrivateWindowCheck.js"></script>
+  </head>
+    <body class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="500" data-image-height="333" id="sec-21e9">
+    <p>
+    <h1 class="neonText">User info 📝 </h1>
+    <h2 class="neonText"><hr></h2>
+    <div class="container">
+    <div class="typewriter"><h3><script language="Javascript"> document.write( "&ensp;Your city " + geoplugin_city() + ", Country " + geoplugin_countryName()); </script></h3></div>
+    <div class="typewriter"><h3><script language="Javascript"> document.write( "&ensp;Your IP adress " + geoplugin_request())</script></h3></div>
+    <div class="typewriter"><h3><script language="Javascript"> document.write( "&ensp;Top 100 websites: I can't get them 👽️")</script></h3></div>
+    <div class="typewriter"><h3><script language="Javascript"> var result=bowser.getParser(window.navigator.userAgent); document.write( "&ensp;You are browsing using " + result.parsedResult.browser.name + " Version " + result.parsedResult.browser.version + " On " + result.parsedResult.os.name + "/" + result.parsedResult.platform.type );</script></h3></div>
+    <div class="typewriter"><h3><script language="Javascript"> if (navigator.cookieEnabled){document.write("&ensp;Cookies are enabled");}else{document.write("Cookies is not enabled");}</script></h3></div>
+    <div class="typewriter"><h3 id="result"></div><script>isPrivateWindow(function(is_private){document.getElementById('result').innerHTML=is_private===null ? 'cannot detect' : is_private ? '&ensp;Browsing in private mode <span>👻</span>' : '&ensp;Browsing in normal mode<span></span>';});</script>
+    <div class="typewriter"><h3><script language="Javascript"> var client=new ClientJS(); var currentResolution=client.getCurrentResolution(); var colorDepth=client.getColorDepth(); var plugins=client.getPlugins(); document.write("&ensp;Your Screen Resolution: ", currentResolution+"<br>"); document.write("&ensp;Your Screen Color Depth: ", colorDepth+"<br>"); document.write("&ensp;The Plugins List if any: ", plugins+"<br>"); </script></h3></div> 
+    <div class="typewriter"><h3><script language="Javascript"> document.write( "&ensp;User's home webpage: only you know 👽️")</script></h3></div>
+    <div class="typewriter"><h3><script language="Javascript"> document.write( "<hr> &ensp;By Ali Saleh Baker") </script></h3></div>
+    <script>
+    var ip=geoplugin_request()
+    var xhr = new XMLHttpRequest()
+    xhr.open("POST", "/postman", true)
+    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.send(JSON.stringify({
+        ip
+    }));
+    </script>
+    </div>
+    </p>
+  </body>
+</html>

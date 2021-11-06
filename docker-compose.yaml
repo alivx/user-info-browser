@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  project1:
+    build: .
+    image: project1
+    container_name: project1
+    ports:
+      - "8989:8989"

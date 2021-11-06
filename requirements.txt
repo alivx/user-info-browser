@@ -1,0 +1,4 @@
+flask
+pyyaml
+ua-parser
+user-agents
