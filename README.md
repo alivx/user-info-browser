@@ -4,6 +4,7 @@
 ----
  
 Name: Ali Baker
+
 Sid: 2100518
  
 ---
@@ -48,6 +49,31 @@ docker container run -ti -p 0.0.0.0:8989:8989 bau:proj1
 * under page `http://127.0.0.1:8989/weather` you will find all user info
 
 
+### How it work
+
+```
+"Your city " + geoplugin_city() + ", Country " + geoplugin_countryName()
+"Your IP adress " + geoplugin_request())
+"Top 100 websites: I can't get them 👽️")
+var result = bowser.getParser(window.navigator.userAgent
+"You are browsing using " + result.parsedResult.browser.name + " Version " + result.parsedResult.browser.version + " On " + result.parsedResult.os.name + "/" + result.parsedResult.platform.type
+if (navigator.cookieEnabled) {
+    "Cookies are enabled"
+} else {
+    "Cookies is not enabled"
+}
+isPrivateWindow(function(is_private) {
+    document.getElementById('result').innerHTML = is_private === null ? 'cannot detect' : is_private ? 'Browsing in private mode <span>👻</span>' : 'Browsing in normal mode<span></span>';
+}
+var client = new ClientJS(
+var currentResolution = client.getCurrentResolution(
+var colorDepth = client.getColorDepth(
+var plugins = client.getPlugins(
+"Your Screen Resolution: ", currentResolution 
+"Your Screen Color Depth: ", colorDepth 
+"The Plugins List if any: ", plugins 
+
+```
 
 ### Geolocation Usages  (Mitchell, 2020)
 * Manage Websites: Website creators use a geolocation service to track the geographic distribution of visitors to their site.
@@ -88,5 +114,3 @@ Available at: http://bluebirdjs.com/docs/features.html
 *  nicepage.com, 2021. nicepage.com. [Online] 
 Available at: https://nicepage.com/
 [Accessed 6 11 2021].
-
-
